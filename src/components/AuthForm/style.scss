@@ -1,0 +1,9 @@
+@use "../../styles/variables" as *;
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+  max-width: 500px;
+  margin-bottom: $spacing-4xl;
+}

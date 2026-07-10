@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+
+.logout {
+  padding: $spacing-sm $spacing-xl;
+  background: $color-error;
+  color: $color-white;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $color-error-hover;
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

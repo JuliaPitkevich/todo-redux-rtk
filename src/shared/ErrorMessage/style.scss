@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.error-message {
+  display: flex;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-lg;
+  background: $color-error-bg;
+  border: 1px solid $color-error-border;
+  border-radius: $radius-md;
+
+  &__icon {
+    font-size: 20px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex: 1;
+    margin: 0;
+    padding-top: 3px;
+    color: $color-error-text;
+    font-size: $font-size-md;
+    text-align: left;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    color: $color-error-text;
+    font-size: $font-size-lg;
+    cursor: pointer;
+    padding: $spacing-xs;
+    line-height: 1;
+    transition: all 0.3s;
+    flex-shrink: 0;
+
+    &:hover {
+      color: $color-error-hover;
+      transform: scale(1.2);
+    }
+  }
+}

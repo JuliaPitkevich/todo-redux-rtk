@@ -1,0 +1,18 @@
+@use "../../styles/variables" as *;
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: $spacing-xl;
+
+  &__card {
+    background: $color-white;
+    padding: $spacing-4xl;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-xl;
+    width: 100%;
+    max-width: 420px;
+  }
+}

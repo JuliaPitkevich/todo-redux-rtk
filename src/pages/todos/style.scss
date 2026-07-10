@@ -1,0 +1,55 @@
+@use "../../styles/variables" as *;
+
+.todos {
+  min-height: 100vh;
+  background: $color-bg-primary;
+  padding: $spacing-xl;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto $spacing-2xl;
+    padding: $spacing-lg $spacing-2xl;
+    background: $color-white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .title {
+      margin: 0;
+    }
+  }
+
+  &__error {
+    max-width: 1200px;
+    margin: 0 auto $spacing-lg;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: $spacing-2xl;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .todos {
+    &__content {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@use "../../styles/variables" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: $radius-md;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  gap: $spacing-sm;
+  font-family: $font-family-primary;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // ===== VARIANTS =====
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background: $color-primary-hover;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba($color-primary, 0.3);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+
+    &:hover:not(:disabled) {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  &--secondary {
+    background: $color-secondary;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background: $color-secondary-hover;
+    }
+  }
+
+  &--success {
+    background: $color-success;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background: $color-success-hover;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba($color-success, 0.3);
+    }
+  }
+
+  &--danger {
+    background: $color-error;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+      background: $color-error-hover;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba($color-error, 0.3);
+    }
+  }
+
+  // ===== SIZES =====
+  &--sm {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-sm;
+  }
+
+  &--md {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-md;
+  }
+
+  &--lg {
+    padding: $spacing-lg $spacing-2xl;
+    font-size: $font-size-lg;
+  }
+
+  // ===== MODIFIERS =====
+  &--fullwidth {
+    width: 100%;
+  }
+}

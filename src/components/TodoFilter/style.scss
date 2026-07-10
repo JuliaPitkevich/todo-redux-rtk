@@ -1,0 +1,16 @@
+@use "../../styles/variables" as *;
+
+.todo-filter {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: $spacing-lg;
+  background: $color-white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+
+  &__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

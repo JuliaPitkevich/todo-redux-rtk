@@ -1,0 +1,72 @@
+// ===== COLORS =====
+$color-primary: #667eea;
+$color-primary-hover: #5a67d8;
+$color-primary-light: rgba(102, 126, 234, 0.1);
+
+$color-secondary: #4b5563;
+$color-secondary-hover: #374151;
+
+$color-success: #16a34a;
+$color-success-hover: #15803d;
+
+$color-error: #dc3545;
+$color-error-bg: #fef2f2;
+$color-error-border: #fecaca;
+$color-error-text: #991b1b;
+$color-error-hover: #b02a37;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-text-primary: #1f2937;
+$color-text-secondary: #6b7280;
+$color-text-light: #9ca3af;
+
+$color-border: #d1d5db;
+$color-border-focus: #667eea;
+$color-border-error: #dc3545;
+
+$color-bg-primary: #f5f7fa;
+$color-bg-disabled: #f3f4f6;
+
+// ===== TYPOGRAPHY =====
+$font-family-primary: "Roboto", sans-serif;
+$font-family-secondary: "Oswald", sans-serif;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 24px;
+$font-size-2xl: 28px;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ===== SPACING =====
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 12px;
+$spacing-lg: 16px;
+$spacing-xl: 20px;
+$spacing-2xl: 24px;
+$spacing-3xl: 30px;
+$spacing-4xl: 40px;
+
+// ===== BORDER RADIUS =====
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 8px;
+$radius-xl: 12px;
+
+// ===== SHADOWS =====
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+// ===== BREAKPOINTS =====
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
