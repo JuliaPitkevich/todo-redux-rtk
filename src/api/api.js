@@ -1,7 +1,7 @@
 import { token } from "../helpers/token";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "https://todo-redev.onrender.com/api";
+  import.meta.env.VITE_API_URL || "https://todo-redev.onrender.com";
 
 const getHeaders = () => ({
   "Content-Type": "application/json",
@@ -14,7 +14,13 @@ const getRequest = async (endpointURL, options = {}) => {
     return null;
   }
   const data = await response.json();
-  if (!response.ok) throw new Error(data.message || `Error ${response.status}`);
+  if (!response.ok) {
+    if (response.status === 401) {
+      token.remove();
+      window.location.href = "/auth";
+    }
+    throw new Error(data.message || `Error ${response.status}`);
+  }
   return data;
 };
 

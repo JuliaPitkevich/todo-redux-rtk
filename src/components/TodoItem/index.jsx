@@ -74,8 +74,8 @@ const TodoItem = ({ task }) => {
       {showConfirm && (
         <ConfirmModal
           title="Delete Task"
-          message={`Are you sure you want to delete all ${tasks.length} tasks? This action cannot be undone.`}
-          confirmText={`Yes, Delete All (${tasks.length})`}
+          message={`Are you sure you want to delete "${task.title}"?`}
+          confirmText="Yes, Delete"
           onConfirm={confirmDelete}
           onCancel={cancelDelete}
         />
