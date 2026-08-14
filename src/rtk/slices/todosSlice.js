@@ -87,6 +87,12 @@ export const todosSlice = createSlice({
     clearErrors: (state) => {
       state.serverError = null;
     },
+    resetTodos: (state) => {
+      state.tasks = [];
+      state.filter = "all";
+      state.serverError = null;
+      state.isLoading = false;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -136,5 +142,5 @@ export const todosSlice = createSlice({
   },
 });
 
-export const { setFilter, clearErrors } = todosSlice.actions;
+export const { setFilter, clearErrors, resetTodos } = todosSlice.actions;
 export default todosSlice.reducer;
