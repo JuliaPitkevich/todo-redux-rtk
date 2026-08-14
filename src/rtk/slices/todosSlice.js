@@ -96,6 +96,11 @@ export const todosSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      .addCase(getTodos.pending, (state) => {
+        state.tasks = [];
+        state.isLoading = true;
+        state.serverError = null;
+      })
       .addCase(getTodos.fulfilled, (state, action) => {
         state.tasks = action.payload.data;
         state.serverError = null;

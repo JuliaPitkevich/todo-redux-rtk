@@ -15,7 +15,7 @@ const getRequest = async (endpointURL, options = {}) => {
   }
   const data = await response.json();
   if (!response.ok) {
-    if (response.status === 401) {
+    if (response.status === 401 && token.get()) {
       token.remove();
       window.location.href = "/auth";
     }
